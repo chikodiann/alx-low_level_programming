@@ -1,64 +1,42 @@
-# 0x06. C - Even more pointers, arrays and strings
+<h1>0x06. C - More pointers, arrays and strings</h1>
+<p>>
+0. strcat
+mandatory
 
-What are pointers to pointers and how to use them
+Write a function that concatenates two strings.
 
-What are multidimensional arrays and how to use them
+    Prototype: char *_strcat(char *dest, char *src);
+    This function appends the src string to the dest string, overwriting the terminating null byte (\0) at the end of dest, and then adds a terminating null byte
+    Returns a pointer to the resulting string dest
 
-What are the most common C standard library functions to manipulate strings
+FYI: The standard library provides a similar function: strcat. Run man strcat to learn more.
+</p>
 
-## Code Projects
-0. memset
-Write a function that fills memory with a constant byte.
-Prototype: char *_memset(char *s, char b, unsigned int n);
-The _memset() function fills the first n bytes of the memory area pointed to
-by s with the constant byte b
-Returns a pointer to the memory area s
+<p>
 
-1. memcpy
-Write a function that copies memory area.
-Prototype: char *_memcpy(char *dest, char *src, unsigned int n);
-The _memcpy() function copies n bytes from memory area src to memory area dest
-Returns a pointer to dest
+1. strncat
+mandatory
 
-2. strchr
-Write a function that locates a character in a string.
-Prototype: char *_strchr(char *s, char c);
-Returns a pointer to the first occurrence of the character c in the string s, or
-NULL if the character is not found
+Write a function that concatenates two strings.
 
-3. strspn
-Write a function that gets the length of a prefix substring.
-Prototype: unsigned int _strspn(char *s, char *accept);
-Returns the number of bytes in the initial segment of s which consist
-only of bytes from accept
+    Prototype: char *_strncat(char *dest, char *src, int n);
+    The _strncat function is similar to the _strcat function, except that
+        it will use at most n bytes from src; and
+        src does not need to be null-terminated if it contains n or more bytes
+    Return a pointer to the resulting string dest
 
-4. strpbrk
-Write a function that searches a string for any of a set of bytes.
-Prototype: char *_strpbrk(char *s, char *accept);
-The _strpbrk() function locates the first occurrence in the string s of any of
-the bytes in the string acceptReturns a pointer to the byte in s that
-matches one of the bytes in accept, or NULL if no such byte is found
+FYI: The standard library provides a similar function: strncat. Run man strncat to learn more
+</p>
 
-5. strstr
-Write a function that locates a substring.
-Prototype: char *_strstr(char *haystack, char *needle);
-The _strstr() function finds the first occurrence of the substring needle
-in the string haystack. The terminating null bytes (\0) are not compared
-Returns a pointer to the beginning of the located substring, or NULL if
-the substring is not found.
+<p>
 
-6. Chess is mental torture
-Write a function that prints the chessboard.
+2. strncpy
+mandatory
 
-7. The line of life is a ragged diagonal between duty and desire
-Write a function that prints the sum of the two diagonals of a square
-matrix of integers.
-Prototype: void print_diagsums(int *a, int size);
-Format: see example
-You are allowed to use the standard library
-Note that in the following example we are casting an int[][] into an int*.
-This is not something you should do. The goal here is to make sure you
-understand how an array of array is stored in memory.
+Write a function that copies a string.
 
-8. Double pointer, double fun mandatory
-Write a function that sets the value of a pointer to a char.
+    Prototype: char *_strncpy(char *dest, char *src, int n);
+    Your function should work exactly like strncpy
+
+FYI: The standard library provides a similar function: strncpy. Run man strncpy to learn more.
+</p>
